@@ -25,7 +25,7 @@ jobs:
       - name: Npm install degit
         run: npm install -g tiged
       - name: degit sub applications
-        run: degit delemercier/scale-ui-app1 --force
+        run: while read -r line; do if [ "${line}" != "" ];then degit ${line} --force fi; done < apps.txt
       - name: Npm install
         run: npm install
       - name: Build
