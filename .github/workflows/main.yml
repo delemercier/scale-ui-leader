@@ -22,8 +22,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: npm -v
-
+      - name: Npm install degit
+        run: npm install -g tiged
+      - name: degit sub applications
+        run: degit delemercier/scale-ui-app1 --force
+      - name: check
+        run: ls -l
+   
