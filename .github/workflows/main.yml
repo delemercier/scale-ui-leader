@@ -26,6 +26,10 @@ jobs:
         run: npm install -g tiged
       - name: degit sub applications
         run: degit delemercier/scale-ui-app1 --force
-      - name: check
+      - name: Npm install
+        run: npm install
+      - name: Package
+        run: npm run package
+      - name: Check
         run: ls -l
    
